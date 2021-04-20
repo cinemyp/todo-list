@@ -14,15 +14,22 @@ const AddTodo = () => {
     setTodo("");
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className={s.root}>
-      <div className={s.content}>
+      <form className={s.content} onSubmit={handleSubmit}>
         <input
           className={s.input}
           type="text"
           value={todo}
           onChange={(e) => {
             setTodo(e.target.value);
+          }}
+          onBlur={() => {
+            setTodo((prevState) => prevState.trim());
           }}
           placeholder="Add Todo..."
         />
@@ -32,7 +39,7 @@ const AddTodo = () => {
         >
           <AddSVG />
         </button>
-      </div>
+      </form>
     </div>
   );
 };
