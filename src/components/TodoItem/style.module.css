@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.input {
+  width: 420px;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 6px 0 4px 10px;
+  border: none;
+  border-bottom: 1px solid #cecece;
+  outline: none;
+  background: transparent;
+  -webkit-transition: width 0.95s, padding-left 0.95s;
+  transition: width 0.95s, padding-left 0.95s;
+}
+
+.input.checked {
+  color: grey;
+  width: 0;
+  padding-left: 0;
+  text-decoration: line-through;
+}
+
+.input:focus {
+  border-color: teal;
+}

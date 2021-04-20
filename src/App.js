@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { FirebaseContext } from "./context/firebaseContext";
+import Firebase from "./services/firebase";
 
-function App() {
+import AddTodo from "./components/AddTodo";
+import Header from "./components/Header";
+import TodoList from "./components/TodoList";
+import "./style.module.css";
+
+const fb = new Firebase();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FirebaseContext.Provider value={fb}>
+      <Header title="Todo List" />
+      <AddTodo />
+      <TodoList />
+    </FirebaseContext.Provider>
   );
-}
+};
 
 export default App;

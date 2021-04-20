@@ -1,0 +1,44 @@
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 500px;
+  position: relative;
+}
+
+.input {
+  background-color: #f2f2f2;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  border: none;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+}
+
+.input:focus {
+  background-color: white;
+  outline: none;
+}
+
+.add {
+  display: none;
+  position: absolute;
+  right: -15px;
+  top: -5px;
+  background-color: #4dd599;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  border-width: 0px;
+  outline: none;
+}
+
+.add.active {
+  display: block;
+}

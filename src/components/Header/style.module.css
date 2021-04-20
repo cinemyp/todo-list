@@ -1,0 +1,15 @@
+.root {
+  position: relative;
+  margin: 0 auto;
+}
+.container {
+  text-align: center;
+  padding: 15px 0;
+}
+.container h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 65px;
+}
